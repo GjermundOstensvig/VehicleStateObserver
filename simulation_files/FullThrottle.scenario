@@ -2,7 +2,6 @@
 <Scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="7.0.0">
   <Trace>dataset_creation.m</Trace>
   <StopTime>30.0</StopTime>
-  <TraceInterval>0.1</TraceInterval>
   <AliasMapFileName>dataset_creation_alias.sam</AliasMapFileName>
   <DatabaseList>
     <Database name="SimulationControl">
