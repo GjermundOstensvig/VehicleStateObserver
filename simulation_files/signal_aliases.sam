@@ -1,10 +1,10 @@
-#Sun Mar 26 19:01:11 PDT 2023
+#Thu Apr 20 21:44:46 PDT 2023
 Vehicle.WheelSystem.FrontRight.Tire.LatSlip[-]=FRTireLateralSlip
 Vehicle.WheelSystem.RearLeft.Tire.LatSlip[-]=RLTireLateralSlip
 ControlUnits.StateSensors.IMU.Acc_wrt_WorldSys(SensorSys)[m/s**2].{signal_1}=IMUAccelerationSignal1
 Vehicle.Chassis.VehicleBody.YawAng[rad]=YawAngle
 Vehicle.Chassis.FrontAxle.Steering.SteeringWheelAng[rad]=SteeringWheelAng
-Vehicle.WheelSystem.RearLeft.Wheel.RotSpd[rad/s]=RearLeftWheelRotSpeed
+Vehicle.WheelSystem.RearLeft.Wheel.RotSpd[rad/s]=RLWheelRotSpeed
 Vehicle.WheelSystem.FrontRight.Tire.CombinedSlip[-]=FRTireCombinedSlip
 Vehicle.WheelSystem.RearRight.Tire.CombinedMaxFrc[N]=RRTireCombinedMaxForce
 ControlUnits.StateSensors.IMU.Acc_wrt_WorldSys(SensorSys)[m/s**2].{signal_3}=IMUAccelerationSignal3
@@ -16,7 +16,7 @@ Vehicle.WheelSystem.RearRight.Tire.ContactPointFrc(ContactSys)[N].{signal_3}=RRT
 Vehicle.WheelSystem.FrontLeft.Tire.CombinedMaxFrc[N]=FLTireCombinedMaxForce
 Vehicle.WheelSystem.FrontRight.Tire.CombinedMaxFrc[N]=FRTireCombinedMaxForce
 Vehicle.WheelSystem.FrontLeft.Tire.ContactPointFrc(ContactSys)[N].{signal_3}=FLTireContactPointForceSignal3
-Vehicle.WheelSystem.FrontLeft.Wheel.RotSpd[rad/s]=FrontLeftWheelRotSpeed
+Vehicle.WheelSystem.FrontLeft.Wheel.RotSpd[rad/s]=FLWheelRotSpeed
 ControlUnits.StateSensors.IMU.RotAcc_wrt_WorldSys(SensorSys)[rad/s**2].{signal_2}=IMURotationalAccelerationSignal2
 Vehicle.WheelSystem.FrontLeft.Tire.CombinedForce[N]=FLTireCombinedForce
 Vehicle.WheelSystem.RearRight.Tire.CombinedForce[N]=RRTireCombinedForce
@@ -24,7 +24,7 @@ Vehicle.WheelSystem.FrontLeft.Tire.LatSlip[-]=FLTireLateralSlip
 Vehicle.WheelSystem.RearRight.Tire.CombinedSlip[-]=RRTireCombinedSlip
 Vehicle.Chassis.VehicleBody.RollAng[rad]=RollAngle
 Vehicle.WheelSystem.RearLeft.Tire.CombinedSlip[-]=RLTireCombinedSlip
-Vehicle.WheelSystem.FrontRight.Wheel.RotSpd[rad/s]=FrontRightWheelRotSpeed
+Vehicle.WheelSystem.FrontRight.Wheel.RotSpd[rad/s]=FRWheelRotSpeed
 Vehicle.Chassis.VehicleBody.PitchAng[rad]=PitchAngle
 Vehicle.WheelSystem.FrontRight.Tire.LongSlip[-]=FRTireLongitudinalSlip
 VehicleControl.LongitudinalControl.AccPedalPos[0_1]=AccelerationPedalPosition
@@ -40,6 +40,6 @@ ControlUnits.StateSensors.IMU.RotAcc_wrt_WorldSys(SensorSys)[rad/s**2].{signal_1
 Vehicle.WheelSystem.RearRight.Tire.LongSlip[-]=RRTireLongitudinalSlip
 ControlUnits.StateSensors.IMU.RotAcc_wrt_WorldSys(SensorSys)[rad/s**2].{signal_3}=IMURotationalAccelerationSignal3
 Vehicle.Chassis.VehicleBody.OverallMass[kg]=VehicleMass
-Vehicle.WheelSystem.RearRight.Wheel.RotSpd[rad/s]=RearRightWheelRotSpeed
+Vehicle.WheelSystem.RearRight.Wheel.RotSpd[rad/s]=RRWheelRotSpeed
 Vehicle.Chassis.VehicleBody.CoGAcc(WorldSys)[m/s**2].{signal_1}=CoGAccelerationSignal1
 Vehicle.Chassis.VehicleBody.SideSlipAng[rad]=VehicleSideSlip
