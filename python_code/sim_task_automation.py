@@ -4,14 +4,15 @@ from dyna4 import RemoteAPI, SimulationTarget
 
 # Constants
 # Path to DYNA4 Installation -> Adjust according to your installation
-PROJECT_NAME = "DatasetCreation"
-MODEL_CONFIGS = [
-    r"MultiBodyVehicleDynamics\SUV_Volvo_XC90.modelconfiguration",
-    # r"BasicVehicleDynamics\SingleTrack.modelconfiguration",
-]
+PROJECT_NAME = "AutomatedDatasetCreation"
+# MODEL_CONFIGS = [
+#     r"MultiBodyVehicleDynamics\SUV_Volvo_XC90.modelconfiguration",
+#     r"BasicVehicleDynamics\SingleTrack.modelconfiguration",
+# ]
 TASKS = [
-    r"PassengerCar\Standstill.task",
-    r"PassengerCar\StandardTests\ISO3888_Type1_DoubleLaneChange.task",
+    # r"PassengerCar\Standstill.task",
+    # r"PassengerCar\StandardTests\ISO3888_Type1_DoubleLaneChange.task",
+    r"MyTestTask.task",
 ]
 GENERAL_TIMEOUT = 1000  # seconds
 SIMULATION_TIMEOUT = 1000  # seconds
@@ -38,8 +39,6 @@ def main():
 
     # Prepare project
     logger.info("--- Preparing Project ---")
-    dy4.deleteProject(PROJECT_NAME)
-    dy4.createProject(PROJECT_NAME, MODEL_CONFIGS, TASKS)
     dy4.saveProject()
     dy4.loadProject(PROJECT_NAME)
 
@@ -56,16 +55,11 @@ def main():
     dy4.setProjectPreference("DYNAanimation.useProjectSpecificSettings", True)
     dy4.setProjectPreference("DYNAanimation.waitForProjectLoaded", True)
 
-    # Prepare target model
-    logger.info("--- Preparing Target Model ---")
-    dy4.activateModelConfiguration(MODEL_CONFIGS[0])
-    dy4.setSimulationTarget(SimulationTarget.DYNA4_WINDOWS_EXECUTABLE)
-
     # Select Tasks
     logger.info("--- Selecting Tasks to execute  ---")
     dy4.deactivateFullTaskConfiguration()
-    logger.info("Activating Task: %s", TASKS[1])
-    dy4.activateTask(TASKS[1], {})
+    logger.info("Activating Task: %s", TASKS[0])
+    dy4.activateTask(TASKS[0], {})
 
     dy4.saveProject()
 
