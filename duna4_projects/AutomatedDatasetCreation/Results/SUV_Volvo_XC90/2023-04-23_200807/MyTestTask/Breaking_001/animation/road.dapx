@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--hash:2be4db6fd1fd3007c681d450953ee235-->
+<Project xmlns="http://www.tesis-dynaware.com/DYNAanimation/Project/1.0" version="7.0.1">
+  <Object name="Road" resource="OBJ">
+    <Component type="PrefabSettings">
+      <Property name="castShadows">false</Property>
+    </Component>
+    <Component type="OBJ">
+      <Property name="objFile">
+      <File location="road\road_obj\road.obj">
+          <Dependency location="material.mtl"/>
+          <Dependency location="grid.jpg"/>
+          <Dependency location="road1.jpg"/>
+          <Dependency location="road2.jpg"/>
+        </File>
+    </Property>
+    </Component>
+    <Component type="CategorySettings">
+      <Property name="type">Road</Property>
+    </Component>
+  </Object>
+</Project>
