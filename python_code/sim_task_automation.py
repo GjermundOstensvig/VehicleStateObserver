@@ -1,24 +1,13 @@
-# 'C:\Program Files\Vector DYNAanimation R7\'
-
 #!/usr/bin/env python3
-# ==============================================================
-# Copyright (c) 2020 by Vector Informatik GmbH
-# file:         demo_full.py
-# description:  Demonstrate the capabilities of the XML-RPC API
-# author:       Vector Informatik GmbH
-# python:       >=3.6
-# ==============================================================
-
 import logging
-
 from dyna4 import RemoteAPI, SimulationTarget
 
 # Constants
 # Path to DYNA4 Installation -> Adjust according to your installation
-PROJECT_NAME = "Demo_RemoteAPI"
+PROJECT_NAME = "DatasetCreation"
 MODEL_CONFIGS = [
-    r"MultiBodyVehicleDynamics\CompactVan.modelconfiguration",
-    r"BasicVehicleDynamics\SingleTrack.modelconfiguration",
+    r"MultiBodyVehicleDynamics\SUV_Volvo_XC90.modelconfiguration",
+    # r"BasicVehicleDynamics\SingleTrack.modelconfiguration",
 ]
 TASKS = [
     r"PassengerCar\Standstill.task",
