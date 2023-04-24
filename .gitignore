@@ -131,3 +131,6 @@ dmypy.json
 # Simulated data
 *.mf4
 output.csv
+
+# Dyna4 project ignores
+*/Results/
