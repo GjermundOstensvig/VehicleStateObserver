@@ -133,4 +133,4 @@ dmypy.json
 output.csv
 
 # Dyna4 project ignores
-*/Results/
+Results/
