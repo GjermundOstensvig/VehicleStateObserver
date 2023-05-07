@@ -2,12 +2,16 @@
 import logging
 from dyna4 import RemoteAPI, SimulationTarget
 
+GENERAL_TIMEOUT = 1000  # seconds
+SIMULATION_TIMEOUT = 1000  # seconds
 PROJECT_NAME = "AutomatedDatasetCreation"
 TASKS = [
     r"MyTestTask.task",
 ]
-GENERAL_TIMEOUT = 1000  # seconds
-SIMULATION_TIMEOUT = 1000  # seconds
+
+my_test_task_parameters = {
+    "friction_coeff": 0,
+}
 
 # Set up logging
 logging.basicConfig(
@@ -51,7 +55,7 @@ def main():
     logger.info("--- Selecting Tasks to execute  ---")
     dy4.deactivateFullTaskConfiguration()
     logger.info("Activating Task: %s", TASKS[0])
-    dy4.activateTask(TASKS[0], {})
+    dy4.activateTask(TASKS[0], my_test_task_parameters)
 
     dy4.saveProject()
 
