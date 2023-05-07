@@ -2,16 +2,8 @@
 import logging
 from dyna4 import RemoteAPI, SimulationTarget
 
-# Constants
-# Path to DYNA4 Installation -> Adjust according to your installation
 PROJECT_NAME = "AutomatedDatasetCreation"
-# MODEL_CONFIGS = [
-#     r"MultiBodyVehicleDynamics\SUV_Volvo_XC90.modelconfiguration",
-#     r"BasicVehicleDynamics\SingleTrack.modelconfiguration",
-# ]
 TASKS = [
-    # r"PassengerCar\Standstill.task",
-    # r"PassengerCar\StandardTests\ISO3888_Type1_DoubleLaneChange.task",
     r"MyTestTask.task",
 ]
 GENERAL_TIMEOUT = 1000  # seconds
