@@ -52,8 +52,10 @@ def main():
     # dTaskParameter: Parameter and value pairs that should be used to overwrite the Task parameters read from the associated Task parameter file.
     # For each task, there is a Task Mask that is saved as a Task Parameter file (*.parameter). 
     # The parameters appearing in the Task Mask need to be defined in the Start node of the Automation Diagram for that task.
-    # See this page for more info:  DYNA4 Help Contents > DYNA4 User Manual > Working with DYNA4 > Simulation Task 
-    dy4.activateTask(sTask = TASKS[0], dTaskParameter = {"friction_coeff": 1.5})
+    # See these two pages for more info: 
+    # DYNA4 Help Contents > DYNA4 User Manual > Working with DYNA4 > Simulation Task 
+    # DYNA4 Help Contents > DYNA4 User Manual > Working with DYNA4 > Simulation Task > Automation Diagrams
+    dy4.activateTask(sTask = TASKS[0], dTaskParameter = {"FronRigthFrictionScaling": 2 , "FrontLeftFrictionScaling": 2, "RearRightFrictionScaling": 2, "RearLeftFrictionScaling": 2})
 
     # dy4.saveProject() Not needed?
 
