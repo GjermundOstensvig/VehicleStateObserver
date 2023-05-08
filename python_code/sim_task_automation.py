@@ -48,11 +48,14 @@ def main():
     logger.info("--- Selecting Tasks to execute  ---")
     dy4.deactivateFullTaskConfiguration()
     logger.info("Activating Task: %s", TASKS[0])
-    
-    #dTaskParameter: Parameter and value pairs that should be used to overwrite the Task parameters read from the associated Task parameter file 
-    dy4.activateTask(sTask = TASKS[0], dTaskParameter = {"friction_coeff": 0})
 
-    dy4.saveProject()
+    # dTaskParameter: Parameter and value pairs that should be used to overwrite the Task parameters read from the associated Task parameter file.
+    # For each task, there is a Task Mask that is saved as a Task Parameter file (*.parameter). 
+    # The parameters appearing in the Task Mask need to be defined in the Start node of the Automation Diagram for that task.
+    # See this page for more info:  DYNA4 Help Contents > DYNA4 User Manual > Working with DYNA4 > Simulation Task 
+    dy4.activateTask(sTask = TASKS[0], dTaskParameter = {"friction_coeff": 1.5})
+
+    # dy4.saveProject() Not needed?
 
     # Run selected task
     logger.info("--- Running Simulation ---")
