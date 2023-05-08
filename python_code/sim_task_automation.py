@@ -48,6 +48,8 @@ def main():
     logger.info("--- Selecting Tasks to execute  ---")
     dy4.deactivateFullTaskConfiguration()
     logger.info("Activating Task: %s", TASKS[0])
+    
+    #dTaskParameter: Parameter and value pairs that should be used to overwrite the Task parameters read from the associated Task parameter file 
     dy4.activateTask(sTask = TASKS[0], dTaskParameter = {"friction_coeff": 0})
 
     dy4.saveProject()
