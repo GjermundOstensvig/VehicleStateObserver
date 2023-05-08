@@ -9,10 +9,6 @@ TASKS = [
     r"MyTestTask.task",
 ]
 
-my_test_task_parameters = {
-    "friction_coeff": 0,
-}
-
 # Set up logging
 logging.basicConfig(
     level=logging.DEBUG,
@@ -32,30 +28,27 @@ def main():
         logger.info("Launched a new DYNA4 instance")
     else:
         logger.info("Connected to existing DYNA4 instance")
-
     # Prepare project
     logger.info("--- Preparing Project ---")
     dy4.saveProject()
     dy4.loadProject(PROJECT_NAME)
-
     # Read some properties
     key = "DYNAanimation.useProjectSpecificSettings"
     val = dy4.getProjectPreference(key)
     logger.info("Project preference %s = '%s'", key, val)
-
     key = "DYNA4Studio.autoOpenProject"
     val = dy4.getGlobalPreference(key)
     logger.info("Global preference %s = '%s'", key, val)
-
     # Wait until animation project is loaded
     dy4.setProjectPreference("DYNAanimation.useProjectSpecificSettings", True)
     dy4.setProjectPreference("DYNAanimation.waitForProjectLoaded", True)
+
 
     # Select Tasks
     logger.info("--- Selecting Tasks to execute  ---")
     dy4.deactivateFullTaskConfiguration()
     logger.info("Activating Task: %s", TASKS[0])
-    dy4.activateTask(TASKS[0], my_test_task_parameters)
+    dy4.activateTask(sTask = TASKS[0], dTaskParameter = {"friction_coeff": 0})
 
     dy4.saveProject()
 
@@ -72,8 +65,6 @@ def main():
     for result in results[0]:
         logger.info("%s", result)
 
-    # optional: shut down DYNA4 afterwards
-    # dy4.deinitialize(True)
     logger.info("--- Finished ---")
 
 
