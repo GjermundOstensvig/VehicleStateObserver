@@ -2,5 +2,9 @@
 <de.tesis.dynaware.simproject:TaskSequence xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:de.tesis.dynaware.simproject="http:///de/tesis/dynaware/simproject/tasks/model.ecore" name="Root Selection" description="Root selection for 'AutomatedDatasetCreation'">
   <items>
     <task href="Database/Tasks/MyTestTask.task#/"/>
+    <parameter href="Database/TaskParameters/(generated).parameter#/"/>
+  </items>
+  <items enabled="false">
+    <task href="Database/Tasks/Combination.task#/"/>
   </items>
 </de.tesis.dynaware.simproject:TaskSequence>

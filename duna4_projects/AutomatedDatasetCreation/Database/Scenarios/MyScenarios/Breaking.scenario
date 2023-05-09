@@ -36,6 +36,7 @@
             <BlockPath>AnimationModules/AnimationContentEnvironment</BlockPath>
           </Reference>
           <Reference xsi:type="DataReference" name="RoadFrictionScaling">
+            <FilePath>cms:\$(database)\EnvironmentDatabase\Basics\EnvironmentModules\RoadFrictionScaling\friction_scaling.m</FilePath>
             <BlockPath>EnvironmentModules/RoadFrictionScaling</BlockPath>
           </Reference>
           <Reference xsi:type="DataReference" name="WindImpact">
