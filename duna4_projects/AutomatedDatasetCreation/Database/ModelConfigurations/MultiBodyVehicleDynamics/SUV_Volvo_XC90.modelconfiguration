@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ModelConfiguration name="SUV_Volvo_XC90" version="7.0.0" description="J-Segment (EU) demo parameters for multi-body vehicle dynamics,&#xA;matching Volvo XC 90 2015 geometry">
-  <ModelName>PassengerCar.slx</ModelName>
-  <ModelDataReference>MultiBodyVehicleDynamics\SUV_Volvo_XC90.modeldata</ModelDataReference>
-</ModelConfiguration>
