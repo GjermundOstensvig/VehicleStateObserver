@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModelConfiguration name="SingleTrack" version="7.0.0" description="M-Segment (EU) demo parameters for basic vehicle dynamics,&#xA;matching VW Golf Sportsvan 2015 geometry">
+  <ModelName>SingleTrack.slx</ModelName>
+  <ModelDataReference>BasicVehicleDynamics\SingleTrack.modeldata</ModelDataReference>
+</ModelConfiguration>
