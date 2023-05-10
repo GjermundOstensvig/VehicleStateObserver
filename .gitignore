@@ -129,7 +129,6 @@ dmypy.json
 .pyre/
 
 # Simulated data
-*.mf4
 output.csv
 
 # Dyna4 project ignores
